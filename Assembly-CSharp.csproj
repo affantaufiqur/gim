@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\BallControl.cs" />
      <Compile Include="Assets\PlayerControl.cs" />
+     <Compile Include="Assets\Timer.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/affan/Documents/GitHub/gim/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
