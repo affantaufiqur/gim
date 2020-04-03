@@ -16,7 +16,7 @@ public class BallControl : MonoBehaviour
        
     }
     void OnCollisionEnter2D(Collision2D other){
-    if(other.collider.name=="PlayerControl" || other.collider.name=="PlayerControl"){
+    if(other.collider.name=="Kanan" || other.collider.name=="Kiri"){
         GetComponent<Transform>().position = new Vector2(0,0);
     }
 }
