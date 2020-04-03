@@ -12,7 +12,7 @@ public class BallControl : MonoBehaviour
     {
     GetComponent<Rigidbody2D>().velocity= new Vector2(1,-1)*speed;
     movement.velocity = new Vector2(-1,-1) * speed;
-    animatr.SetBool("isMove", true);
+    animatr.SetBool("IsMove", true);
        
     }
     void OnCollisionEnter2D(Collision2D other){
@@ -38,11 +38,11 @@ public class BallControl : MonoBehaviour
 
 IEnumerator jeda(){
 	movement.velocity = Vector2.zero;
-	animtr.SetBool("isMove", false);
+	animtr.SetBool("IsMove", false);
 	movement.GetComponent<Transform>().position = Vector2.zero;
 	yield return new WaitForSeconds(1);
 	movement.velocity = new Vector2(-1,-1) * speed;
-	animtr.SetBool("isMove", true);
+	animtr.SetBool("IsMove", true);
 
 }*/
 
