@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class BallControl : MonoBehaviour
 {
-    public int speed = 30;
+    //public int speed = 30;
     public Rigidbody2D movement;
     public Animator animatr;
  
     void Start()
     {
-    GetComponent<Rigidbody2D>().velocity= new Vector2(1,-1)*speed;
-    movement.velocity = new Vector2(-1,-1) * speed;
+    int x = Random.Range(0, 2)*2-1;
+    int y = Random.Range(0, 2)*2-1;
+    int speed = Random.Range(1,5);
+    //GetComponent<Rigidbody2D>().velocity= new Vector2(x, y)*speed;
+    movement.velocity = new Vector2(x, y) * speed;
+    movement.GetComponent<Transform>().position = Vector2.zero;
     animatr.SetBool("IsMove", true);
        
     }
@@ -40,7 +44,12 @@ IEnumerator jeda(){
 	movement.velocity = Vector2.zero;
 	animtr.SetBool("IsMove", false);
 	movement.GetComponent<Transform>().position = Vector2.zero;
+	
 	yield return new WaitForSeconds(1);
+	
+	int x = Random.Range(0, 2)*2-1;
+    int y = Random.Range(0, 2)*2-1;
+    int speed = Random.Range(1,5);
 	movement.velocity = new Vector2(-1,-1) * speed;
 	animtr.SetBool("IsMove", true);
 
