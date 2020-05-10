@@ -132,9 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c87136a753749a40b828b4579b5d68d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   movement: {fileID: 4137710698591367889}
   animatr: {fileID: 4137710698736326365}
+  hitEffect: {fileID: 0}
 --- !u!1 &4137710698736326354
 GameObject:
   m_ObjectHideFlags: 0

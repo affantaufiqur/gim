@@ -7,6 +7,8 @@ public class BallControl : MonoBehaviour
     //public int speed = 30;
     public Rigidbody2D movement;
     public Animator animatr;
+
+    public AudioSource hitEffect;
  
     void Start()
     {
@@ -23,6 +25,10 @@ public class BallControl : MonoBehaviour
     if(other.collider.name=="Kanan" || other.collider.name=="Kiri"){
         GetComponent<Transform>().position = new Vector2(0,0);
     }
+        if (other.collider.tag == "Player")
+        {
+            hitEffect.Play();
+        }
 }
 
     // Update is called once per frame
